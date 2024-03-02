@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6E07F3">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="/js/theme.js"></script>
+    <title>Nelson Ekoh | Web Developer</title>
+</head>
+<body>
+    
+
+    <header>
+        <div class="logo">
+            <h2 onclick="window.location.reload()">Nelkeys</h2>
+        </div>
+
+        <div class="top-links">
+            <div class="theme-icons">
+                <i class='bx bxs-moon' id="moon" onclick="toggleDarkMode()"></i>
+                <i class='bx bx-sun' id="sun" onclick="toggleLightMode()"></i>
+            </div>
+
+            <a href="javascript:null(0)" onclick="sayHello()" class="bordered">Say Hello</a>
+        </div>
+
+        <i class="bx bx-menu"></i>
+
+        <script>
+            setThemeFromLocalStorage()
+        </script>
+    </header>
+
+    <section class="hero">
+        <div class="hero-top">
+            <h1>Designer, Frontend Developer & Mentor</h1>
+          
+            <p>I beautifully design and code simple things, and I love what I do.</p>
+
+            <img src="/assets/mf-avatar.svg" alt="">
+        </div>
+
+        <img class="hero-devices" src="/assets/hero-devices.svg" alt="">
+    </section>
+
+
+    <div class="blurred-body" id="blurred-body">
+        <div class="input-area">
+
+            <div class="input-area-top">
+                <p>Contact Us:</p>
+                <i class="bx bx-x" onclick="closeHello()"></i>
+            </div>
+            
+
+            <form action="">
+                <textarea name="message" id="helloMessage"></textarea>
+                <button type="submit">Send</button>
+            </form>
+
+        </div>
+    </div>
+    
+
+
+    <script>
+        function sayHello() {
+            document.getElementById('blurred-body').style.display = "flex";
+        }
+        function closeHello() {
+            document.getElementById('blurred-body').style.display = "none";
+        }
+    </script>
+</body>
+</html>
